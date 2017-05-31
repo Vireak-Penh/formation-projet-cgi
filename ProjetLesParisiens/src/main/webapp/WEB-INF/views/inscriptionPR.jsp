@@ -10,40 +10,45 @@
 <title>Application point relai</title>
 </head>
 <body>
+	<h1>Création de votre compte </h1>
 	<div class="coordonnees">
+	<form:form action="#" method="post" modelAttribute="newUtilisateur">
 		<div class="lastname">
 		<label for="lastname">Nom :</label>
-		<input type="text" id="lastname" value="lastname" placeholder="Nom">
+		<form:input type="text" id="lastname" path="lastname" placeholder="Nom"/>
 		</div>
 		
-		<div class="Surname">
+		<div class="surname">
 		<label for="surname">Prénom :</label>
-		<input type="text" id="surname" value="surname" placeholder="Prénom">
+		<form:input type="text" id="surname" path="surname" placeholder="Prénom"/>
 		</div>
 		
 			
 		<!-- <label for="Birthdate">Date deNaissance :</label>
 		<input type="" id="Surname" value="Surname" placeholder="Date de Naissance"> -->
 		
-		<div class="PR">
-		<label for="PR">faites-vous point relai ?</label>
-		<form:checkbox path="PR" id="PR"/>
+		<div class="pointofdelivery">
+		<label for="pointofdelivery">faites-vous point relai ?</label>
+		<form:checkbox path="pointofdelivery" id="pointofdelivery"/>
 		</div>
 		
-		<div class="DeliveryUser">
-		<label for="DeliveryUser">utilisez-vous le service de point relai ?</label>
-		<form:checkbox path="DeliveryUser" id="DeliveryUser"/>
+		<div class="deliveryuser">
+		<label for="deliveryuser">utilisez-vous le service de point relai ?</label>
+		<form:checkbox path="deliveryuser" id="deliveryuser"/>
 		</div>
 		
-		<div class="Phone">
-		<label for="Phone">Numéro de portable :</label>
-		<input type="text" id="Phone" value="Phone" placeholder="Phone">
+		<div class="phone">
+		<label for="phone">Numéro de portable :</label>
+		<form:input type="text" id="phone" path="phone" placeholder="phone"/>
 		</div>
 		
-		<div class="Mail">
-		<label for="Mail">Adresse Mail :</label>
-		<input type="text" id="Mail" value="Mail" placeholder="Mail">
+		<div class="email">
+		<label for="email">Adresse Mail :</label>
+		<form:input type="text" id="email" path="email" placeholder="email"/>
 		</div>
+		
+		<button>valider</button>
+	</form:form>
 	</div>
 
 

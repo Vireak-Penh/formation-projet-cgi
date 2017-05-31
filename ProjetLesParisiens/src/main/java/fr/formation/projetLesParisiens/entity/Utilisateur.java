@@ -17,7 +17,7 @@ public class Utilisateur implements Serializable {
 	private Boolean deliveryuser;
 	private Date birthdate;
 	private Integer phone;
-	private String mail;
+	private String email;
 
 	/**
 	 * @return the userid
@@ -71,8 +71,8 @@ public class Utilisateur implements Serializable {
 	/**
 	 * @return the mail
 	 */
-	public String getMail() {
-		return mail;
+	public String getEmail() {
+		return email;
 	}
 
 	/**
@@ -135,8 +135,8 @@ public class Utilisateur implements Serializable {
 	 * @param mail
 	 *            the mail to set
 	 */
-	public void setMail(String mail) {
-		this.mail = mail;
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
 }

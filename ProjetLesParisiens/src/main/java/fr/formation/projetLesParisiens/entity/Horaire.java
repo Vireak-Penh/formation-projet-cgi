@@ -13,7 +13,7 @@ public class Horaire implements Serializable {
 	private Integer scheduleid;
 	private String day;
 	private Boolean morning;
-	private String afternoon;
+	private Boolean afternoon;
 
 	/**
 	 * @return the userid
@@ -62,7 +62,7 @@ public class Horaire implements Serializable {
 	/**
 	 * @return the afternoon
 	 */
-	public String getAfternoon() {
+	public Boolean getAfternoon() {
 		return afternoon;
 	}
 
@@ -86,7 +86,7 @@ public class Horaire implements Serializable {
 	 * @param afternoon
 	 *            the afternoon to set
 	 */
-	public void setAfternoon(String afternoon) {
+	public void setAfternoon(Boolean afternoon) {
 		this.afternoon = afternoon;
 	}
 
