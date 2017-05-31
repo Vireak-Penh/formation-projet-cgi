@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Fichier de configuration ORM (Object-Relational Mapping) qui décrit le lien entre les objets Java et les tables relationnelles de
+la base de données. Il faut déclarer un élément entity pour chaque objet Java utilisé et configurer le lien des attributs Java avec les
+différentes colonnes de la base de données. -->
+<entity-mappings version="2.0"
+	xmlns="http://java.sun.com/xml/ns/persistence/orm"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm http://java.sun.com/xml/ns/persistence/orm_2_0.xsd">
+	
+	<entity class="fr.formation.projetLesParisiens.entity.Utilisateur">
+		<table name="user"/>
+		<attributes>
+			<id name="userid">
+				<column name="userid"/>
+				<!-- auto incrément  -->
+				<generated-value strategy="IDENTITY"/>
+			</id>
+			<basic name="lastname"></basic>
+			<basic name="surname"></basic>
+			<basic name="birthdate"></basic>
+			<basic name="pointofdelivery"></basic>
+			<basic name="deliveryuser"></basic>
+			<basic name="phone"></basic>
+			<basic name="mail"></basic>
+		</attributes>
+	</entity>
+	
+	<entity class="fr.formation.projetLesParisiens.entity.Adresse">
+		<table name="adress"/>
+		<attributes>
+			<id name="adressid">
+				<column name="adressid"/>
+				<generated-value strategy="IDENTITY"/>
+			</id>
+			<basic name="channelnumber"></basic>
+			<basic name="street"></basic>
+			<basic name="codepostal"></basic>
+			<basic name="city"></basic>
+			<one-to-one name="user">
+				<join-column name="userid" referenced-column-name="userid" />
+			</one-to-one>
+			
+			
+		</attributes>
+	</entity>
+	
+	
+	<entity class="fr.formation.projetLesParisiens.entity.Horaire">
+		<table name="schedule"/>
+		<attributes>
+			<id name="scheduleid">
+				<column name="scheduleid"/>
+				<generated-value strategy="IDENTITY"/>
+			</id>
+			<basic name="day"></basic>
+			<basic name="morning"></basic>
+			<basic name="afternoon"></basic>
+			<one-to-one name="user">
+				<join-column name="userid" referenced-column-name="userid" />
+			</one-to-one>
+		</attributes>
+	</entity>
+</entity-mappings>
