@@ -4,33 +4,26 @@
 <html>
 <jsp:include page="header.jsp" /> 
 <body>
-<h1>Liste des adresses possibles</h1>
-	<table id="adresseLivraisonTable">
+<h1>Liste des lieux possibles</h1>
+	<table id="lieuLivraisonTable">
 		<thead>
 			<!-- thead pour UNE en-tête -->
 			<tr>
-				<th>ChannelNumber</th>
-				<th>Street</th>
-				<th>PostalCode</th>
-				<th>City</th>
+				<th>email</th>
 			</tr>
 		</thead>
 		<body>
 			<!-- body peut en avoir plusieurs -->
-			<c:forEach items="${adresseLivraisonList}" var="adresseLivraison">
+			<c:forEach items="${lieuLivraisonList}" var="lieuLivraison">
 				<tr>
-					<td>${adresseLivraison.channelnumber}</td>
-					<!-- Lorsque .id ça fait appel au getter -> get(id) -->
-					<td>${adresseLivraison.street}</td>
-					<td>${adresseLivraison.postalcode}</td>
-					<td>${adresseLivraison.city}</td>
+					<td>${lieuLivraison.email}</td>
 				</tr>
 			</c:forEach>
 		</body>
 	</table>
 	<jsp:include page="footer.jsp" />
 	<script type="text/javascript">
-		$("#adresseLivraisonTable").DataTable();
+		$("#lieuLivraisonTable").DataTable();
 	</script>
 
 </body>

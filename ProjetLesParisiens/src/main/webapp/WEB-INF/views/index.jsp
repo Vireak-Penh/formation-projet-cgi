@@ -78,6 +78,10 @@
 		</div>
 	</div>
 	
+	<div class ="choisir">
+		<a href="/projetLesParisiens/choixLieuLivraison/index.html">CHOISIR UN LIEU DE LIVRAISON</a>
+	</div>
+	
 	<div class="proposer">
 			<a href="/projetLesParisiens/inscriptionPR/index.html">PROPOSER MON ADRESSE DE LIVRAISON</a>
 	</div>
@@ -113,7 +117,7 @@
 						<img src="images/picto-facebook.png">
 					</a></li>
 					<li><a href="" target="_blank" class="twitter">
-						<img src="/Web-Design/images/picto-twitter.png">
+						<img src="Web-Design/images/picto-twitter.png">
 					</a></li>
 					<li><a href="" target="_blank" class="instagram">
 						<img src="images/picto-instagram.png">

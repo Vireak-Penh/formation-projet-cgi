@@ -12,7 +12,6 @@
 <body>
 
 	<h1>Le compte avec cette adresse mail existe déjà</h1>
-
-
+	<jsp:include page="footer.jsp" />
 </body>
 </html>
