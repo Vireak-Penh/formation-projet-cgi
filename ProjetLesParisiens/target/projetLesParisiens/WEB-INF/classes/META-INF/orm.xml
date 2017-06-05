@@ -21,7 +21,7 @@ différentes colonnes de la base de données. -->
 			<basic name="pointofdelivery"></basic>
 			<basic name="deliveryuser"></basic>
 			<basic name="phone"></basic>
-			<basic name="mail"></basic>
+			<basic name="email"></basic>
 		</attributes>
 	</entity>
 	
