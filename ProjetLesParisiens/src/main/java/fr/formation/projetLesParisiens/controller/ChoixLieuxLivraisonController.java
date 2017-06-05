@@ -33,6 +33,12 @@ public class ChoixLieuxLivraisonController {
 		return mav;
 	}
 
+	@RequestMapping(path = "/adressNotFound", method = RequestMethod.GET)
+	public ModelAndView index2() {
+		final ModelAndView mav = new ModelAndView("adressNotFound");
+		return mav;
+	}
+
 	@RequestMapping(path = "/index", method = RequestMethod.POST)
 	public String searchAdress(@ModelAttribute("choixLieuLivraison") final Adresse adress) {
 		if (this.adressRepository.findByPostalcode(adress.getPostalcode()).isEmpty()) {
