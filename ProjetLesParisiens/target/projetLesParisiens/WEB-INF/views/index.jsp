@@ -113,7 +113,7 @@
 						<img src="images/picto-facebook.png">
 					</a></li>
 					<li><a href="" target="_blank" class="twitter">
-						<img src="images/picto-twitter.png">
+						<img src="/Web-Design/images/picto-twitter.png">
 					</a></li>
 					<li><a href="" target="_blank" class="instagram">
 						<img src="images/picto-instagram.png">
