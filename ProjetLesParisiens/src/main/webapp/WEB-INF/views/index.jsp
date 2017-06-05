@@ -15,7 +15,8 @@
 		</div>
 		<nav class="right-header">
 			<ul>
-				<li><a href="">S'inscrire</a></li>
+				<li><a href="/projetLesParisiens/inscriptionPR/">S'inscrire</a></li>
+				<li><a href="/projetLesParisiens/inscriptionPR/modifyWhichAccount.html">Modifier son compte</a></li>
 				<li><a href="">Se connecter</a></li>
 			</ul>
 		</nav>
@@ -109,16 +110,16 @@
 		</div>
 		<div class="footer-socials">
 				<ul>
-					<li><a href="" target="_blank" class="facebook">
+					<li><a href="www.facebok.fr" target="_blank" class="facebook">
 						<img src="images/picto-facebook.png">
 					</a></li>
-					<li><a href="" target="_blank" class="twitter">
+					<li><a href="www.twitter.fr" target="_blank" class="twitter">
 						<img src="images/picto-twitter.png">
 					</a></li>
-					<li><a href="" target="_blank" class="instagram">
+					<li><a href="www.instagram.fr" target="_blank" class="instagram">
 						<img src="images/picto-instagram.png">
 					</a></li>
-					<li><a href="" target="_blank" class="youtube">
+					<li><a href="www.youtube.fr" target="_blank" class="youtube">
 						<img src="images/picto-youtube.png">
 					</a></li>
 				</ul>
