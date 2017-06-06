@@ -4,8 +4,17 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
+
+<!-- responsive -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
 <title>Application point relai</title>
+
+<!-- Bootstrap -->
+<link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+
 </head>
 <body>
 	
@@ -15,7 +24,8 @@
 		</div>
 		<nav class="right-header">
 			<ul>
-				<li><a href="">S'inscrire</a></li>
+				<li><a href="/projetLesParisiens/inscriptionPR/">S'inscrire</a></li>
+				<li><a href="/projetLesParisiens/inscriptionPR/modifyWhichAccount.html">Modifier son compte</a></li>
 				<li><a href="">Se connecter</a></li>
 			</ul>
 		</nav>
@@ -78,6 +88,10 @@
 		</div>
 	</div>
 	
+	<div class ="choisir">
+		<a href="/projetLesParisiens/choixLieuLivraison/index.html">CHOISIR UN LIEU DE LIVRAISON</a>
+	</div>
+	
 	<div class="proposer">
 			<a href="/projetLesParisiens/inscriptionPR/index.html">PROPOSER MON ADRESSE DE LIVRAISON</a>
 	</div>
@@ -109,20 +123,28 @@
 		</div>
 		<div class="footer-socials">
 				<ul>
-					<li><a href="" target="_blank" class="facebook">
+					<li><a href="www.facebok.fr" target="_blank" class="facebook">
 						<img src="images/picto-facebook.png">
 					</a></li>
+<<<<<<< HEAD
 					<li><a href="" target="_blank" class="twitter">
+						<img src="Web-Design/images/picto-twitter.png">
+=======
+					<li><a href="www.twitter.fr" target="_blank" class="twitter">
 						<img src="images/picto-twitter.png">
+>>>>>>> 7e3481567f8769f1411d3dc7e4367522260e1f5a
 					</a></li>
-					<li><a href="" target="_blank" class="instagram">
+					<li><a href="www.instagram.fr" target="_blank" class="instagram">
 						<img src="images/picto-instagram.png">
 					</a></li>
-					<li><a href="" target="_blank" class="youtube">
+					<li><a href="www.youtube.fr" target="_blank" class="youtube">
 						<img src="images/picto-youtube.png">
 					</a></li>
 				</ul>
 		</div>
 	</footer>
+	<!-- appels JavaScript si utilise des plugins jQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="js/bootstrap.js"></script>
 </body>
 </html>
