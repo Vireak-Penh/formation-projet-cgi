@@ -8,19 +8,11 @@
 <html>
 <jsp:include page="header.jsp" />
 <body>
-	<h1>Choisissez un lieu de livraison</h1>
-
-	<div class="postalcode">
-	<form:form action="#" method="post" modelAttribute="choixLieuLivraison">
-		<label for="postalcode">Entrez un code postal :</label>
-		<form:input type="text" 
-			id="postalcode" 
-			path="postalcode"
-			placeholder="code postal" />
-	<button>Rechercher</button>
-	</form:form>			
+	<h1>L'adresse (postalcode) n'est pas disponible, veuillez
+		réessayer.</h1>
+	<div style="position: fixed; width: 100%; height: 80px;">
+		<a href="<c:url value="/choixLieuLivraison/index.html" />">Page précédente</a>
 	</div>
-
 	<jsp:include page="footer.jsp" />
 </body>
 </html>

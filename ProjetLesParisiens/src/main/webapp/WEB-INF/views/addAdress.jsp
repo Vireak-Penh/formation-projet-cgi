@@ -29,7 +29,7 @@
 		
 		<div class="city">
 		<label for="city">Ville :</label>
-		<form:input type="text" id="city" path="city" placeholder="Vill"/>
+		<form:input type="text" id="city" path="city" placeholder="Ville"/>
 		</div>
 		
 		<button>valider</button>
