@@ -4,8 +4,17 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
+
+<!-- responsive -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
 <title>Application point relai</title>
+
+<!-- Bootstrap -->
+<link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+
 </head>
 <body>
 	
@@ -134,5 +143,8 @@
 				</ul>
 		</div>
 	</footer>
+	<!-- appels JavaScript si utilise des plugins jQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="js/bootstrap.js"></script>
 </body>
 </html>
