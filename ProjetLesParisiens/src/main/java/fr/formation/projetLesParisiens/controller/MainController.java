@@ -34,22 +34,26 @@ public class MainController {
 	@RequestMapping(path = "/index")
 	public ModelAndView index() {
 		ModelAndView mav = new ModelAndView("index");
-//		final String menus = this.getMessage("menus");
-//		getMessage("menus");
-//		MainController.LOGGER.debug("Valeur associé à la clé 'menus' : {}", menus);
-//		final List<Menu> menulist = new ArrayList<>();
-//		if (menus != null && !menus.isEmpty()) {
-//			for (final String menu : menus.split(",")) {
-//				final String title = this.getMessage(menu.concat(MainController.KEY_SUFFIX_TITLE));
-//				final String url = this.getMessage(menu.concat(MainController.KEY_SUFFIX_URL));
-//				menulist.add(new Menu(title, url));
-//			}
-//		}
-//		mav.getModel().put("menulist", menulist);
+		// final String menus = this.getMessage("menus");
+		// getMessage("menus");
+		// MainController.LOGGER.debug("Valeur associé à la clé 'menus' : {}",
+		// menus);
+		// final List<Menu> menulist = new ArrayList<>();
+		// if (menus != null && !menus.isEmpty()) {
+		// for (final String menu : menus.split(",")) {
+		// final String title =
+		// this.getMessage(menu.concat(MainController.KEY_SUFFIX_TITLE));
+		// final String url =
+		// this.getMessage(menu.concat(MainController.KEY_SUFFIX_URL));
+		// menulist.add(new Menu(title, url));
+		// }
+		// }
+		// mav.getModel().put("menulist", menulist);
 		return mav;
 	}
 
 	private String getMessage(final String key) {
 		return this.messageSource.getMessage(key, null, Locale.getDefault());
 	}
+
 }

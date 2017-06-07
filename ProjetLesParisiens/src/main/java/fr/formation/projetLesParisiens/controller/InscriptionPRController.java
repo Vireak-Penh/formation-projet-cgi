@@ -13,9 +13,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
+import fr.formation.projetLesParisiens.dao.AccountRepository;
 import fr.formation.projetLesParisiens.dao.AdresseRepository;
 import fr.formation.projetLesParisiens.dao.HoraireRepository;
+import fr.formation.projetLesParisiens.dao.RoleRepository;
 import fr.formation.projetLesParisiens.dao.UtilisateurRepository;
+import fr.formation.projetLesParisiens.entity.Account;
 import fr.formation.projetLesParisiens.entity.Adresse;
 import fr.formation.projetLesParisiens.entity.Horaire;
 import fr.formation.projetLesParisiens.entity.Utilisateur;
@@ -30,21 +33,45 @@ public class InscriptionPRController {
 	private HoraireRepository scheduleRepository;
 	@Autowired
 	private AdresseRepository adressRepository;
+	@Autowired
+	private AccountRepository accountRepository;
+	@Autowired
+	private RoleRepository roleRepository;
 
 	private Integer userid;
 
-	private Utilisateur usermodif;
+	private Integer accountid;
 
 	@RequestMapping(path = "/index", method = RequestMethod.GET)
+	public ModelAndView newAccount() {
+		ModelAndView mav = new ModelAndView("createAccount");
+		return mav;
+	}
+
+	@RequestMapping(path = "/index", method = RequestMethod.POST)
+	public String createAccount(final HttpServletRequest request) {
+		final String username = request.getParameter("username");
+		final String password = request.getParameter("password");
+		final Account account = new Account();
+		account.setUsername(username);
+		account.setPassword(password);
+		account.setEnabled(true);
+		account.setRole(this.roleRepository.findOneById(1));
+		this.accountRepository.save(account);
+		return "redirect:/inscriptionPR/Coordonnees.html";
+	}
+
+	@RequestMapping(path = "/Coordonnees", method = RequestMethod.GET)
 	public String newUtilisateur(final Model model) {
 		model.addAttribute("newUtilisateur", new Utilisateur());
 		model.addAttribute("newAdresse", new Adresse());
 		return "inscriptionPR";
 	}
 
-	@RequestMapping(path = "/index", method = RequestMethod.POST)
+	@RequestMapping(path = "/Coordonnees", method = RequestMethod.POST)
 	public String createUtilisateur(@ModelAttribute("newUtilisateur") final Utilisateur user) {
 		if (this.userRepository.findByEmail(user.getEmail()).isEmpty()) {
+			user.setAccountid(this.accountid);
 			this.userRepository.save(user);
 			this.userid = user.getUserid();
 			return "redirect:/inscriptionPR/addAdresse.html";
@@ -105,51 +132,6 @@ public class InscriptionPRController {
 	public ModelAndView countExists() {
 		ModelAndView mav = new ModelAndView("countExists");
 		return mav;
-	}
-
-	@RequestMapping(path = "/modifyWhichAccount", method = RequestMethod.GET)
-	public ModelAndView formulaireEmail() {
-		ModelAndView mav = new ModelAndView("emailForModif");
-		return mav;
-	}
-
-	@RequestMapping(path = "/modifyWhichAccount", method = RequestMethod.POST)
-	public String sendEmail(final HttpServletRequest request) {
-		if (this.userRepository.findByEmail(request.getParameter("userEmail")).size() > 0) {
-			this.usermodif = this.userRepository.findByEmail(request.getParameter("userEmail")).get(0);
-			return "redirect:/inscriptionPR/modifyAccount.html";
-		} else {
-			return "redirect:/inscriptionPR/modifyWhichAccount.html";
-		}
-	}
-
-	@RequestMapping(path = "/modifyAccount", method = RequestMethod.GET)
-	public ModelAndView afficheModifyAccount() {
-		ModelAndView mav = new ModelAndView("modifiercompte");
-		mav.getModel().put("UserModif", this.userRepository.findOne(usermodif.getUserid()));
-		mav.getModel().put("AdressModif", this.adressRepository.findByUserid(usermodif.getUserid()).get(0));
-		return mav;
-	}
-
-	@RequestMapping(path = "/modifyAccount", method = RequestMethod.POST)
-	public String modifyAccount(final HttpServletRequest request) {
-		final String lastname = request.getParameter("lastname");
-		final String surname = request.getParameter("surname");
-		final String email = request.getParameter("email");
-		final Integer phone = Integer.parseInt(request.getParameter("phone"));
-		final Boolean pointofdelivery = Boolean.parseBoolean(request.getParameter("pointofdelivery"));
-		final Boolean deliveryuser = Boolean.parseBoolean(request.getParameter("deliveryuser"));
-		final Integer channelnumber = Integer.parseInt(request.getParameter("channelnumber"));
-		final Integer postalcode = Integer.parseInt(request.getParameter("postalcode"));
-		final String street = request.getParameter("street");
-		final String city = request.getParameter("city");
-		// this.userRepository.updateTable(usermodif.getUserid(), lastname,
-		// surname, pointofdelivery, deliveryuser, email,
-		// phone);
-		this.userRepository.updateTable(usermodif.getUserid(), surname, lastname, pointofdelivery, deliveryuser, email,
-				phone);
-		this.adressRepository.updateTable(usermodif.getUserid(), channelnumber, street, postalcode, city);
-		return "redirect:/";
 	}
 
 }

@@ -7,6 +7,7 @@
 <html>
 <jsp:include page="header.jsp" /> 
 <body>
+<jsp:include page="headerInBody.jsp" />
 	<h1>Modification des informations de votre compte </h1>
 	<div class="coordonnees">
 		<form action="#" method="post">
@@ -78,7 +79,7 @@
 		<label for="city">Ville :</label>
 		<input type="text" id="city" name ="city" value="${AdressModif.city}" placeholder="city">
 		</div>
-		
+		<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
 		<button>valider</button>
 		</form>
 	</div>

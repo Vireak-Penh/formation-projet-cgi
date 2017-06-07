@@ -22,6 +22,9 @@ différentes colonnes de la base de données. -->
 			<basic name="deliveryuser"></basic>
 			<basic name="phone"></basic>
 			<basic name="email"></basic>
+			<one-to-one name="account">
+				<join-column name="accountid" referenced-column-name="accountid" />
+			</one-to-one>
 		</attributes>
 	</entity>
 	
@@ -87,6 +90,7 @@ différentes colonnes de la base de données. -->
 			<one-to-one name="role">
 				<join-column name="id_role" referenced-column-name="id" />
 			</one-to-one>
+
 		</attributes>
 	</entity>
 </entity-mappings>

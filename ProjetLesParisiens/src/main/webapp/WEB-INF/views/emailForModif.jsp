@@ -7,15 +7,17 @@
 <html>
 <jsp:include page="header.jsp" /> 
 <body>
-	<h1>Modification des informations de votre compte </h1>
-	
-
-		<div class="userEmail">
-		<form action="#" method="post">
-		<label for="userEmail">Entrez votre email pour modifier votre compte</label>
-		<input type="text" id="userEmail" name="userEmail" placeholder="email"/>
-		<button>valider</button>
-		</form>
+<jsp:include page="headerInBody.jsp" />
+		<div class="container">
+			<h1>Modification des informations de votre compte </h1>
+			<h2>Votre username est : ${username}</h2>
+			<div class="userEmail">
+			<form action="#" method="post">
+			<label for="userEmail">Entrez votre email pour modifier votre compte</label>
+			<input type="text" id="userEmail" name="userEmail" placeholder="email"/>
+			<button>valider</button>
+			</form>
+			</div>
 		</div>
 </body>
 </html>
