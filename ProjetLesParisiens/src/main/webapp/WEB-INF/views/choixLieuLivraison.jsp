@@ -12,11 +12,21 @@
 
 	<div class="postalcode">
 	<form:form action="#" method="post" modelAttribute="choixLieuLivraison">
-		<label for="postalcode">Entrez un code postal :</label>
+		<label for="postalcode">code postal :</label>
 		<form:input type="text" 
 			id="postalcode" 
 			path="postalcode"
 			placeholder="code postal" />
+		<label for="postalcode">n° de rue :</label>
+		<form:input type="text" 
+			id="channelnumber" 
+			path="channelnumber"
+			placeholder="n° de rue" />
+		<label for="postalcode">rue :</label>
+		<form:input type="text" 
+			id="street" 
+			path="street"
+			placeholder="rue" />
 	<button>Rechercher</button>
 	</form:form>			
 	</div>

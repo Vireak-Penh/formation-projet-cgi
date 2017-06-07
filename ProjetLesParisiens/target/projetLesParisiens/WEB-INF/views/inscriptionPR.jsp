@@ -47,7 +47,7 @@
 		<button>valider</button>
 	</form:form>
 	</div>
-	
+
 	<jsp:include page="footer.jsp" />
 
 </body>

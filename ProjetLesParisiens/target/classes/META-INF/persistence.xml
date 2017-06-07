@@ -13,13 +13,8 @@ la base de données ainsi que les paramètres de cette connexion. Il y a aussi u
              	<properties>
              		<property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver"/>
              		<property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/projetlesparisiens"/>
-<<<<<<< HEAD
-             		<property name="hibernate.connection.user" value="LPUser"/>
-             		<property name="hibernate.connection.password" value="lesparisiens"/>
-=======
              		<property name="hibernate.connection.user" value="root"/>
-             		<property name="hibernate.connection.password" value="Fedex2811"/>
->>>>>>> 7e3481567f8769f1411d3dc7e4367522260e1f5a
+             		<property name="hibernate.connection.password" value="Dolphins69"/>
              		<property name="hibernae.dialect" value="org.hibernate.dialect.MySQL5Dialect"/>
              	</properties>
              </persistence-unit>

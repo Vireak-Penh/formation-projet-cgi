@@ -19,5 +19,4 @@ public interface AdresseRepository extends JpaRepository<Adresse, Integer> {
 	public int updateTable(Integer userid, Integer channelnumber, String street, Integer postalcode, String city);
 
 	public List<Adresse> findByPostalcode(Integer postalcode);
-
 }
