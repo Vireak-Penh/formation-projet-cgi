@@ -5,9 +5,9 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-<jsp:include page="header.jsp" /> 
+
 <body>
-<jsp:include page="headerInBody.jsp" />
+
 	<h1>Création de votre compte </h1>
 	<div class="coordonnees">
 	<form:form action="#" method="post" modelAttribute="newUtilisateur">
@@ -49,7 +49,7 @@
 	</form:form>
 	</div>
 
-	<jsp:include page="footer.jsp" />
+
 
 </body>
 </html>

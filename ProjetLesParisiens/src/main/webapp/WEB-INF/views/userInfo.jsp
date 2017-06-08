@@ -5,9 +5,9 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-<jsp:include page="header.jsp" /> 
+
 <body>
-<jsp:include page="headerInBody.jsp" />
+
 		<div class="container">
 			<h1>Votre compte </h1>
 			<p> Nom : ${user.surname} ${user.lastname}</p>

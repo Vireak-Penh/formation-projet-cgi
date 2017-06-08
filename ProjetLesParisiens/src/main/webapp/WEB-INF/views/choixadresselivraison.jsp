@@ -2,7 +2,7 @@
     pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-<jsp:include page="header.jsp" /> 
+ /> 
 <body>
 <h1>Liste des adresses possibles</h1>
 	<table id="adresseLivraisonTable">
@@ -28,7 +28,7 @@
 			</c:forEach>
 		</body>
 	</table>
-	<jsp:include page="footer.jsp" />
+
 	<script type="text/javascript">
 		$("#adresseLivraisonTable").DataTable();
 	</script>
