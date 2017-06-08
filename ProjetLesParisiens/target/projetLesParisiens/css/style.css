@@ -64,7 +64,7 @@
 }
 
 .body__2 {
-	
+	height: 329px;
 }
 
 .body__2 .up {
@@ -74,6 +74,7 @@
 	width: 34%;
 	padding: 5% 8%;
 	text-align: justify;
+	height: 200px;
 }
 
 .body__2 .right {
@@ -82,16 +83,49 @@
 	background-color: #FBAB09;
 	width: 34%;
 	padding: 5% 8%;
+	height: 200px;
 }
 
-.body__2 .right label {
-	margin: 5px;
+.body__2 .right a {
+	color: #32616C;
+	text-decoration: none;
+	border: 1px solid #32616C;
+	border-radius: 5px;
+	size: 10px;
+	transition: all 0.3s ease 0s;
 	padding: 10px;
 }
 
-.body__2 .right select {
-	margin: 10px 10px 10px 10px;
-	padding: 5px;
-	border: 1px solid #89E6BB;
+.body__2 .right a:hover {
+	color: #FBAB09;
+	background-color: #32616C;
+}
+
+.choisir {
+	padding-top: 20px;
+}
+
+.proposer {
+	width: 100%;
+	color: #32616C;
+	background-color: #FBAB09;
+	height: 100px;
+	text-align: center;
+}
+
+.proposer a {
+	color: #32616C;
+	text-decoration: none;
+	border: 1px solid #32616C;
 	border-radius: 5px;
+	size: 10px;
+	transition: all 0.3s ease 0s;
+	padding: 10px;
+	position: relative;
+    top: 40px;
+}
+
+.proposer a:hover {
+	color: #FBAB09;
+	background-color: #32616C;
 }
