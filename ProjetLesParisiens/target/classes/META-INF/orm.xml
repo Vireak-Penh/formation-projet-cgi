@@ -60,4 +60,19 @@ différentes colonnes de la base de données. -->
 			</one-to-one>
 		</attributes>
 	</entity>
+	
+	<entity class="fr.formation.projetLesParisiens.entity.Historique">
+		<table name="historique"/>
+		<attributes>
+			<id name="historiqueid">
+				<column name="historiqueid"/>
+				<generated-value strategy="IDENTITY"/>
+			</id>
+			<basic name="userid"></basic>
+			<basic name="date"></basic>
+			<one-to-one name="user">
+				<join-column name="userid" referenced-column-name="userid" />
+			</one-to-one>
+		</attributes>	
+	</entity>
 </entity-mappings>

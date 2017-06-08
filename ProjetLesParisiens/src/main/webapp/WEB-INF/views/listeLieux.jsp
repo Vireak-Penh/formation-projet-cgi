@@ -19,8 +19,7 @@
 				<th>Lieu(x) proposé(s)</th>
 			</tr>
 		</thead>
-
-
+		
 		<body>
 
 			<c:url value="recapitulatifCommande" var="validUrlPrefix" />

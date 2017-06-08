@@ -8,7 +8,11 @@
 <jsp:include page="header.jsp" /> 
 <body>
 
-	<h1>Votre commande a bien été prise en compte</h1>
+	<h1>Votre commande a bien été prise en compte.</h1>
+	<div class="historique">
+	<form:form action="#" method="post" modelAttribute="newCommand">
+	</form:form>	
+	</div>
 
 	<jsp:include page="footer.jsp" />
 </body>
