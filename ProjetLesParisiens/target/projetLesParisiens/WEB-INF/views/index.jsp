@@ -13,7 +13,6 @@
 <body>
 
 	<header class="header">
-<<<<<<< HEAD
 	
 		<div class="home">
 			<a href="file:///Users/vireakchriv/Documents/Formation/Projet/MyHouse.html">MyHouse</a>
@@ -44,22 +43,6 @@
 		</c:choose>
 		
 	</header>
-=======
-	<div class="home">
-		<a
-			href="file:///Users/vireakchriv/Documents/Formation/Projet/MyHouse.html">My
-			House</a>
-	</div>
-	<nav class="right-header">
-	<ul>
-		<li><a href="/projetLesParisiens/inscriptionPR/">S'inscrire</a></li>
-		<li><a
-			href="/projetLesParisiens/inscriptionPR/modifyWhichAccount.html">Modifier
-				son compte</a></li>
-		<li><a href="">Se connecter</a></li>
-	</ul>
-	</nav> </header>
->>>>>>> 530b0d7992711aba9236069bde781d6f54a793ba
 
 
 	<section class="body__1">
@@ -81,11 +64,8 @@
 		</div>
 
 		<div class="right">
-<<<<<<< HEAD
 			<h1 class="rechercher__titre1">Où est-ce que je veux me faire
 				livrer ?</h1>
-=======
->>>>>>> 530b0d7992711aba9236069bde781d6f54a793ba
 			<div class="choisir">
 				<a href="/projetLesParisiens/choixLieuLivraison/index.html">CHOISIR
 					UN LIEU DE LIVRAISON</a>
@@ -93,10 +73,7 @@
 		</div>
 	</div>
 
-<<<<<<< HEAD
 
-=======
->>>>>>> 530b0d7992711aba9236069bde781d6f54a793ba
 	<div class="proposer">
 		<a href="/projetLesParisiens/inscriptionPR/index.html">PROPOSER
 			MON ADRESSE DE LIVRAISON</a>
@@ -131,7 +108,6 @@
 		<ul>
 			<li><a href="www.facebok.fr" target="_blank" class="facebook">
 					<img src="images/picto-facebook.png">
-<<<<<<< HEAD
 			</a></li>
 			<li><a href="www.twitter.fr" target="_blank" class="twitter">
 					<img src="images/picto-twitter.png">
@@ -145,27 +121,5 @@
 		</ul>
 	</div>
 	</footer>
-=======
-			</a></li> <<<<<<< HEAD
-			<li><a href="" target="_blank" class="twitter"> <img
-					src="Web-Design/images/picto-twitter.png"> =======
-					<li><a href="www.twitter.fr" target="_blank" class="twitter">
-							<img src="images/picto-twitter.png"> >>>>>>>
-							7e3481567f8769f1411d3dc7e4367522260e1f5a
-					</a></li>
-					<li><a href="www.instagram.fr" target="_blank"
-						class="instagram"> <img src="images/picto-instagram.png">
-					</a></li>
-					<li><a href="www.youtube.fr" target="_blank" class="youtube">
-							<img src="images/picto-youtube.png">
-					</a></li>
-		</ul>
-	</div>
-	</footer>
-	<!-- appels JavaScript si utilise des plugins jQuery -->
-	<script
-		src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-	<script src="js/bootstrap.js"></script>
->>>>>>> 530b0d7992711aba9236069bde781d6f54a793ba
 </body>
 </html>
