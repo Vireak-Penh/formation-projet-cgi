@@ -22,6 +22,9 @@ différentes colonnes de la base de données. -->
 			<basic name="deliveryuser"></basic>
 			<basic name="phone"></basic>
 			<basic name="email"></basic>
+			<one-to-one name="account">
+				<join-column name="accountid" referenced-column-name="accountid" />
+			</one-to-one>
 		</attributes>
 	</entity>
 	
@@ -61,6 +64,7 @@ différentes colonnes de la base de données. -->
 		</attributes>
 	</entity>
 	
+
 	<entity class="fr.formation.projetLesParisiens.entity.Historique">
 		<table name="historique"/>
 		<attributes>
@@ -75,4 +79,36 @@ différentes colonnes de la base de données. -->
 			</one-to-one>
 		</attributes>	
 	</entity>
+	
+	<entity class="fr.formation.projetLesParisiens.entity.Role">
+		<table name="role" />
+		<attributes>
+			<id name="id">
+				<column name="id" />
+				<!-- AUTO_INCREMENT -->
+				<generated-value strategy="IDENTITY" />
+			</id>
+			<basic name="name" />
+		</attributes>
+	</entity>
+	
+	<entity class="fr.formation.projetLesParisiens.entity.Account">
+		<table name="account" />
+		<attributes>
+			<id name="accountid">
+				<column name="accountid" />
+				<!-- AUTO_INCREMENT -->
+				<generated-value strategy="IDENTITY" />
+			</id>
+			<basic name="username" />
+			<basic name="password" />
+			<basic name="enabled" />
+			<one-to-one name="role">
+				<join-column name="id_role" referenced-column-name="id" />
+			</one-to-one>
+
+		</attributes>
+	</entity>
 </entity-mappings>
+
+
