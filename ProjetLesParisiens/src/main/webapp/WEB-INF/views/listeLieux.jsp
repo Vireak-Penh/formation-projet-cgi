@@ -44,7 +44,6 @@
 		<a href="<c:url value="/choixLieuLivraison/index.html" />">Page
 			précédente</a>
 	</div>
-	<jsp:include page="footer.jsp" />
 	<script type="text/javascript">
 		$("#lieuLivraisonTable").DataTable();
 	</script>
