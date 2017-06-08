@@ -15,7 +15,7 @@ la base de données ainsi que les paramètres de cette connexion. Il y a aussi u
              		<property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/projetlesparisiens"/>
              		<property name="hibernate.connection.user" value="root"/>
 <<<<<<< HEAD
-             		<property name="hibernate.connection.password" value="math"/>
+             		<property name="hibernate.connection.password" value="Fedex2811"/>
 =======
              		<property name="hibernate.connection.password" value="Dolphins69"/>
 
