@@ -8,14 +8,15 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Application point relai</title>
+<link href="../css/styleFormulaire.css" rel="stylesheet">
 </head>
 <body>
-
-	<h1>Vos disponibilités </h1>
-	<div class="schedule">
+	<div class="barreMenu"><h2>Barre Menu </h2></div>
+	<div class="Titre"><h3>Entrez Vos disponibilités </h3></div>
+	<div class="formulaire">
 	<form:form action="#" method="post" modelAttribute="newSchedule">
 		<div class="day">
-		<label for="day">Jour :</label>
+		<label for="day">Jour :</label><br>
 		<form:select path="day">
 			<form:options items="${dayList}"/>
 		</form:select>

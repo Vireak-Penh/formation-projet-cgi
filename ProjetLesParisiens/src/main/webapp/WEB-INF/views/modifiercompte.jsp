@@ -5,11 +5,16 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Application point relai</title>
+<link href="../css/styleFormulaire.css" rel="stylesheet">
+</head>
 <body>
+	<div class="barreMenu"><h2>Barre Menu </h2></div>
+	<div class="Titre"><h3>Modification des informations de votre compte </h3></div>
 
-	<h1>Modification des informations de votre compte </h1>
-	<div class="coordonnees">
+	<div class="formulaire">
 		<form action="#" method="post">
 		<div class="lastname">
 		<label for="lastname">Nom :</label>

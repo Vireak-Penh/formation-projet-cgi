@@ -3,6 +3,8 @@ package fr.formation.projetLesParisiens.controller;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -31,20 +33,20 @@ public class ChoixLieuxLivraisonController {
 	@Autowired
 	private UtilisateurRepository userRepository;
 
-	private Adresse searchbyadress;
+	private Integer postalcode;
 
 	private Integer userid;
 
 	@RequestMapping(path = "/index", method = RequestMethod.GET)
-	public String choixLieuLivraison(final Model model) {
-		model.addAttribute("choixLieuLivraison", new Adresse());
-		return "choixLieuLivraison";
+	public ModelAndView choixLieuLivraison() {
+		ModelAndView mav = new ModelAndView("choixLieuLivraison");
+		return mav;
 	}
 
 	@RequestMapping(path = "/listeLieux", method = RequestMethod.GET)
 	public ModelAndView index() {
 		final ModelAndView mav = new ModelAndView("listeLieux");
-		List<Adresse> list1 = this.adressRepository.findByPostalcode(searchbyadress.getPostalcode());
+		List<Adresse> list1 = this.adressRepository.findByPostalcode(postalcode);
 		List<Adresse> lieuLivraisonList = new ArrayList<>();
 		for (Adresse ad : list1) {
 			Integer uid = ad.getUserid();
@@ -86,11 +88,12 @@ public class ChoixLieuxLivraisonController {
 	}
 
 	@RequestMapping(path = "/index", method = RequestMethod.POST)
-	public String searchAdress(@ModelAttribute("choixLieuLivraison") final Adresse adress) {
-		if (this.adressRepository.findByPostalcode(adress.getPostalcode()).isEmpty()) {
+	public String searchAdress(final HttpServletRequest request) {
+		final Integer postalcode = Integer.parseInt(request.getParameter("postalcode"));
+		if (this.adressRepository.findByPostalcode(postalcode).isEmpty()) {
 			return "redirect:/choixLieuLivraison/adressNotFound.html";
 		} else {
-			this.searchbyadress = adress;
+			this.postalcode = postalcode;
 			return "redirect:/choixLieuLivraison/listeLieux.html";
 		}
 	}

@@ -6,31 +6,38 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 
-<body>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>My House !</title>
+<link href="../css/styleFormulaire.css" rel="stylesheet">
+</head>
 
-	<h1>Votre adresse </h1>
-	<div class="adresse">
+
+<body>
+	<div class="barreMenu"><h2>Barre Menu </h2></div>
+	<div class="Titre"><h3>Entrez votre adresse </h3></div>
+	<div class="formulaire">
 	<form:form action="#" method="post" modelAttribute="newAdresse">
-		<div class="channelnumber">
-		<label for="channelnumber">N° de rue :</label>
+		<p>
+		<label for="channelnumber">N° de rue </label><br>
 		<form:input type="text" id="channelnumber" path="channelnumber" placeholder="num de rue"/>
-		</div>
+		</p>
 		
-		<div class="street">
-		<label for="street">rue :</label>
+		<p>
+		<label for="street">Rue </label><br>
 		<form:input type="text" id="street" path="street" placeholder="rue"/>
-		</div>
+		</p>
 		
 		
-		<div class="postalcode">
-		<label for="postalcode">Code postal :</label>
+		<p>
+		<label for="postalcode">Code postal </label><br>
 		<form:input type="text" id="postalcode" path="postalcode" placeholder="code postal"/>
-		</div>
+		</p>
 		
-		<div class="city">
-		<label for="city">Ville :</label>
+		<p>
+		<label for="city">Ville </label><br>
 		<form:input type="text" id="city" path="city" placeholder="Ville"/>
-		</div>
+		</p>
 		
 		<button>valider</button>
 	</form:form>

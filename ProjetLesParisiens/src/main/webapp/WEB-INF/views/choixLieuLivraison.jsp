@@ -6,29 +6,31 @@
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-<jsp:include page="header.jsp" />
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Application Web MyHouse</title>
+<link href="../css/style-choix-lieu-livraison.css" rel="stylesheet">
+</head>
 <body>
+	<header class="header">
+	
+			<div class="home">
+				<a href="file:///Users/vireakchriv/Documents/Formation/Projet/MyHouse.html">MyHouse</a>
+			</div>
+	</header>
 	<h1>Choisissez un lieu de livraison</h1>
 
 	<div class="postalcode">
-	<form:form action="#" method="post" modelAttribute="choixLieuLivraison">
+	<form action="#" method="post">
 		<label for="postalcode">code postal :</label>
-		<form:input type="text" 
+		<input type="text" 
 			id="postalcode" 
-			path="postalcode"
+			name="postalcode"
 			placeholder="code postal" />
-		<label for="postalcode">n° de rue :</label>
-		<form:input type="text" 
-			id="channelnumber" 
-			path="channelnumber"
-			placeholder="n° de rue" />
-		<label for="postalcode">rue :</label>
-		<form:input type="text" 
-			id="street" 
-			path="street"
-			placeholder="rue" />
+		<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">	
+	
 	<button>Rechercher</button>
-	</form:form>			
+	</form>			
 	</div>
 
 </body>

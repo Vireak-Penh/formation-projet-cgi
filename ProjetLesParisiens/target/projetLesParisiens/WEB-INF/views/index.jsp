@@ -46,23 +46,6 @@
 		</c:choose>
 		
 	</header>
-	
-	
-		<div class="home">
-			<a href="file:///Users/vireakchriv/Documents/Formation/Projet/MyHouse.html">MyHouse</a>
-		</div>
-		
-		<nav class="right-header">
-		<ul>
-			<li><a href="/projetLesParisiens/inscriptionPR/">S'inscrire</a></li>
-			<li><a
-				href="/projetLesParisiens/inscriptionPR/modifyWhichAccount.html">Modifier
-					son compte</a></li>
-			<li><a href="">Se connecter</a></li>
-		</ul>
-		</nav>
-	
-	</header>
 
 
 	<section class="body__1">
