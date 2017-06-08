@@ -1,5 +1,8 @@
 package fr.formation.projetLesParisiens.controller;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -11,6 +14,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import fr.formation.projetLesParisiens.dao.AdresseRepository;
 import fr.formation.projetLesParisiens.dao.HistoriqueRepository;
+import fr.formation.projetLesParisiens.dao.UtilisateurRepository;
 import fr.formation.projetLesParisiens.entity.Adresse;
 import fr.formation.projetLesParisiens.entity.Historique;
 
@@ -23,6 +27,9 @@ public class ChoixLieuxLivraisonController {
 
 	@Autowired
 	private AdresseRepository adressRepository;
+
+	@Autowired
+	private UtilisateurRepository userRepository;
 
 	private Adresse searchbyadress;
 
@@ -37,7 +44,15 @@ public class ChoixLieuxLivraisonController {
 	@RequestMapping(path = "/listeLieux", method = RequestMethod.GET)
 	public ModelAndView index() {
 		final ModelAndView mav = new ModelAndView("listeLieux");
-		mav.getModel().put("lieuLivraisonList", this.adressRepository.findByPostalcode(searchbyadress.getPostalcode()));
+		List<Adresse> list1 = this.adressRepository.findByPostalcode(searchbyadress.getPostalcode());
+		List<Adresse> lieuLivraisonList = new ArrayList<>();
+		for (Adresse ad : list1) {
+			Integer uid = ad.getUserid();
+			if (this.userRepository.findOne(uid).getPointofdelivery() == true) {
+				lieuLivraisonList.add(ad);
+			}
+		}
+		mav.getModel().put("lieuLivraisonList", lieuLivraisonList);
 		return mav;
 	}
 
