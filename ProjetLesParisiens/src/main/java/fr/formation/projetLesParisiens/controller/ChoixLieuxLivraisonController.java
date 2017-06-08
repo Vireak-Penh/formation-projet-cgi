@@ -10,17 +10,23 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import fr.formation.projetLesParisiens.dao.AdresseRepository;
+import fr.formation.projetLesParisiens.dao.HistoriqueRepository;
 import fr.formation.projetLesParisiens.entity.Adresse;
+import fr.formation.projetLesParisiens.entity.Historique;
 
 @Controller
 @RequestMapping("/choixLieuLivraison")
 public class ChoixLieuxLivraisonController {
 
-	private Adresse searchbyadress;
-	private Adresse selectedadress;
+	@Autowired
+	private HistoriqueRepository historiqueRepository;
 
 	@Autowired
 	private AdresseRepository adressRepository;
+
+	private Adresse searchbyadress;
+
+	private Integer userid;
 
 	@RequestMapping(path = "/index", method = RequestMethod.GET)
 	public String choixLieuLivraison(final Model model) {
@@ -46,6 +52,22 @@ public class ChoixLieuxLivraisonController {
 		Adresse adr = this.adressRepository.findOne(id);
 		model.addAttribute("recapitulatifAdresse", adr);
 		return "recapitulatifCommande";
+	}
+
+	@RequestMapping(path = "/validationCommande", method = RequestMethod.GET)
+	public String newCommand(final Model model) {
+		model.addAttribute("newCommand", new Historique());
+		return "validationCommande";
+	}
+
+	@RequestMapping(path = "/recapitulatifCommande", method = RequestMethod.POST)
+	public String createCmdHist(final Model model, @RequestParam("lieuLivraisonId") int id,
+			@ModelAttribute("newCmdHist") final Historique cmdHist) {
+		Adresse adr = this.adressRepository.findOne(id);
+		model.addAttribute("recapitulatifAdresse", adr);
+		cmdHist.setUserid(this.userid);
+		this.historiqueRepository.save(cmdHist);
+		return "validationCommande";
 	}
 
 	@RequestMapping(path = "/index", method = RequestMethod.POST)

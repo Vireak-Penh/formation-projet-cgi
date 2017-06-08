@@ -7,14 +7,34 @@
 <html>
 <jsp:include page="header.jsp" />
 <body>
-	<h1>Récapitulatif de votre commande :</h1>
-	<h2>Vous avez choisi comme adresse de livraison : </h2>
-	<p>N° de rue : ${recapitulatifAdresse.channelnumber}</br>
-	rue : ${recapitulatifAdresse.street}</br>
-	Code postal : ${recapitulatifAdresse.postalcode}</p>
-	
+	<c:url value="/choixLieuLivraison" var="choixLieuLivraisonUrl" />
+	<c:url value="recapitulatifCommande" var="validUrlPrefix" />
+	<c:url value="validationCommande" var="validationCommandeUrl" />
+
+	<h1>Récapitulatif de votre commande</h1>
+	<h2>Vous avez choisi comme adresse de livraison :</h2>
+	<form:form action="#" method="post" modelAttribute="newCmdHist">
+		<div class="userid">
+		<label for="userid" id="userid" path="userid">userid</label>
+		</div>
+		<div class="channelnumber">
+		<label for="channelnumber" id="channelnumber"> N° de rue :
+			${recapitulatifAdresse.channelnumber}</label>
+		</div>
+		<div class="street">
+		<label for="street" id="street"> rue :
+			${recapitulatifAdresse.street}</label>
+		</div>
+		<div class="postalcode">
+		<label for="postalcode" id="postalcode"> Code postal :
+			${recapitulatifAdresse.postalcode} </label>
+		</div>
+		<a
+			href="${choixLieuLivraisonUrl}/${validationCommandeUrl}.html?commandeValideId=">Valider</a>
+	</form:form>
 	<div style="position: fixed; width: 100%; height: 80px;">
-		<a href="<c:url value="/choixLieuLivraison/listeLieux.html" />">Page précédente</a>
+		<a href="<c:url value="/choixLieuLivraison/listeLieux.html" />">Page
+			précédente</a>
 	</div>
 	<jsp:include page="footer.jsp" />
 </body>

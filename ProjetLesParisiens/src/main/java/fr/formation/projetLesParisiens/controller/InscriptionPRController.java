@@ -50,7 +50,6 @@ public class InscriptionPRController {
 			return "redirect:/inscriptionPR/addAdresse.html";
 		} else {
 			return "redirect:/inscriptionPR/countExists.html";
-
 		}
 
 	}
