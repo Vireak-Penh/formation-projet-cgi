@@ -10,6 +10,7 @@
 <title>Application point relai</title>
 </head>
 <body>
+
 	<h1>Vos disponibilités </h1>
 	<div class="schedule">
 	<form:form action="#" method="post" modelAttribute="newSchedule">

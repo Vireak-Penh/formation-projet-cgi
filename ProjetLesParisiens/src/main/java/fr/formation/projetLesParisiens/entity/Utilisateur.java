@@ -18,6 +18,22 @@ public class Utilisateur implements Serializable {
 	private Date birthdate;
 	private Integer phone;
 	private String email;
+	private Integer accountid;
+
+	/**
+	 * @return the accountid
+	 */
+	public Integer getAccountid() {
+		return accountid;
+	}
+
+	/**
+	 * @param accountid
+	 *            the accountid to set
+	 */
+	public void setAccountid(Integer accountid) {
+		this.accountid = accountid;
+	}
 
 	/**
 	 * @return the userid

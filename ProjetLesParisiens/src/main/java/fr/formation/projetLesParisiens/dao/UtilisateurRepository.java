@@ -13,6 +13,8 @@ public interface UtilisateurRepository extends JpaRepository<Utilisateur, Intege
 
 	public List<Utilisateur> findByEmail(String email);
 
+	public Utilisateur findOneByAccountid(Integer accountid);
+
 	// @Query("UPDATE user u SET u.lastname = ?2, u.surname = ?3,
 	// u.pointofdelivery = ?4, u.deliveryuser = ?5, u.email = ?6, u.phone = ?7
 	// WHERE u.userid= ?1; ")

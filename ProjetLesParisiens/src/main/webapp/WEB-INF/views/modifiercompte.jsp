@@ -5,8 +5,9 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-<jsp:include page="header.jsp" /> 
+
 <body>
+
 	<h1>Modification des informations de votre compte </h1>
 	<div class="coordonnees">
 		<form action="#" method="post">
@@ -79,11 +80,96 @@
 		<input type="text" id="city" name ="city" value="${AdressModif.city}" placeholder="city">
 		</div>
 		
+		<% int i = 0; %>
+		<c:forEach items="${schedule}" var="schedule">
+		<label for="day">Jour :</label>
+		<select id="day" name="<%="day".concat(Integer.toString(i))%>">
+			<c:choose>
+		    <c:when test="${schedule.day == 'lundi'}">
+		        <option value="lundi" selected>lundi</option> 
+		    </c:when>    
+		    <c:otherwise>
+		        <option value="lundi">lundi</option>
+		    </c:otherwise>
+			</c:choose>
+			
+			<c:choose>
+		    <c:when test="${schedule.day == 'mardi'}">
+		        <option value="mardi" selected>mardi</option> 
+		    </c:when>    
+		    <c:otherwise>
+		        <option value="mardi">mardi</option>
+		    </c:otherwise>
+			</c:choose>
+			
+			<c:choose>
+		    <c:when test="${schedule.day == 'mercredi'}">
+		        <option value="mercredi" selected>mercredi</option> 
+		    </c:when>    
+		    <c:otherwise>
+		        <option value="mercredi">mercredi</option>
+		    </c:otherwise>
+			</c:choose>
+			
+			<c:choose>
+		    <c:when test="${schedule.day == 'jeudi'}">
+		        <option value="jeudi" selected>jeudi</option> 
+		    </c:when>    
+		    <c:otherwise>
+		        <option value="jeudi">jeudi</option>
+		    </c:otherwise>
+			</c:choose>
+			
+			<c:choose>
+		    <c:when test="${schedule.day == 'vendredi'}">
+		        <option value="vendredi" selected>vendredi</option> 
+		    </c:when>    
+		    <c:otherwise>
+		        <option value="vendredi">vendredi</option>
+		    </c:otherwise>
+			</c:choose>
+			
+			<c:choose>
+		    <c:when test="${schedule.day == 'samedi'}">
+		        <option value="samedi" selected>samedi</option> 
+		    </c:when>    
+		    <c:otherwise>
+		        <option value="samedi">samedi</option>
+		    </c:otherwise>
+			</c:choose>
+
+		</select>
+<%-- 		<input type="text" id="day" name ="<%="day".concat(Integer.toString(i))%>" value="${schedule.day}" placeholder="day"> --%>
+		
+		<label for="morning">Matin : </label>
+		<c:choose>
+		    <c:when test="${schedule.morning == '1'}">
+		        <input type="checkbox" id="morning" name ="<%="morning".concat(Integer.toString(i))%>"  value="true" >  
+		    </c:when>    
+		    <c:otherwise>
+		        <input type="checkbox" id="morning" name ="<%="morning".concat(Integer.toString(i))%>"  value="true" checked>  
+		    </c:otherwise>
+		</c:choose>
+		
+		<label for="afternoon">Après-midi : </label>
+		<c:choose>
+		    <c:when test="${schedule.afternoon == '1'}">
+		        <input type="checkbox" id="afternoon" name ="<%="afternoon".concat(Integer.toString(i))%>"  value="true" >  
+		    </c:when>    
+		    <c:otherwise>
+		        <input type="checkbox" id="afternoon" name ="<%="afternoon".concat(Integer.toString(i))%>"  value="true" checked>  
+		    </c:otherwise>
+		</c:choose>
+		<input type="hidden" name="<%= i %>" value="${schedule.scheduleid}"><br>
+		<%  i++ ; %>
+		</c:forEach>
+		<input type="hidden" name="sizeSchedule" value="${sizeSchedule}">
+		<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
 		<button>valider</button>
 		</form>
 	</div>
 	
-	<jsp:include page="footer.jsp" />
+
 
 
 </body>
