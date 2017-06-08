@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <html lang="en">
 
 <head>
@@ -49,6 +52,8 @@
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
+            <c:choose>
+            <c:when test="${bool == 0 }">
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
@@ -62,6 +67,24 @@
                     </li>
                 </ul>
             </div>
+            </c:when>
+            <c:otherwise>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <form action="/projetLesParisiens/j_spring_security_logout" method="post">
+							<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
+							<button>Se déconnecter</button>
+						</form>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="/projetLesParisiens/User/">${ username} </a>
+                    </li>
+                </ul>
+            </div>
+            
+            </c:otherwise>
+            </c:choose>
             <!-- /.navbar-collapse -->
         </div>
         <!-- /.container-fluid -->

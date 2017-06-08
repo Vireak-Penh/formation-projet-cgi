@@ -7,6 +7,7 @@
 <html>
 <jsp:include page="header.jsp" /> 
 <body>
+<jsp:include page="headerInBody.jsp" />
 	<h1>Création de votre compte </h1>
 	<div class="coordonnees">
 	<form:form action="#" method="post" modelAttribute="newUtilisateur">

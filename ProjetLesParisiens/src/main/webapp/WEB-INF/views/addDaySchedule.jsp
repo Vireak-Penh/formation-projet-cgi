@@ -10,6 +10,7 @@
 <title>Application point relai</title>
 </head>
 <body>
+<jsp:include page="headerInBody.jsp" />
 	<div class"add_day">
 	<h1><a href="/projetLesParisiens/inscriptionPR/addSchedule.html">Ajouter un autre jour disponible</a></h1>
 	</div>

@@ -10,7 +10,7 @@
 <title>Application point relai</title>
 </head>
 <body>
-
+	<jsp:include page="headerInBody.jsp" />
 	<h1>Le compte avec cette adresse mail existe déjà</h1>
 
 

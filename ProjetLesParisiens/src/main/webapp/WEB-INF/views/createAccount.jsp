@@ -8,6 +8,9 @@
 <jsp:include page="header.jsp" /> 
 <body>
 <jsp:include page="headerInBody.jsp" />
+	<c:if test="${ error == 1}">
+		<h1 style="color : red; "> Erreur, un compte avec ce username existe déjà  </h1>
+	</c:if>
 	<h1>Creation de votre compte </h1>
 	<div class="account">
 		<form action="#" method="post">

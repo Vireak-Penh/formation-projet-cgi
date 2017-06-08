@@ -7,7 +7,7 @@
 <html>
 <jsp:include page="header.jsp" /> 
 <body>
-
+<jsp:include page="headerInBody.jsp" />
 	<h1>Votre adresse </h1>
 	<div class="adresse">
 	<form:form action="#" method="post" modelAttribute="newAdresse">
