@@ -36,6 +36,5 @@
 		<a href="<c:url value="/choixLieuLivraison/listeLieux.html" />">Page
 			précédente</a>
 	</div>
-	<jsp:include page="footer.jsp" />
 </body>
 </html>

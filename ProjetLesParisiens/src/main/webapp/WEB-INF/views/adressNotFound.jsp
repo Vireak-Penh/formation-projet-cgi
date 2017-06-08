@@ -13,6 +13,5 @@
 	<div style="position: fixed; width: 100%; height: 80px;">
 		<a href="<c:url value="/choixLieuLivraison/index.html" />">Page précédente</a>
 	</div>
-	<jsp:include page="footer.jsp" />
 </body>
 </html>
